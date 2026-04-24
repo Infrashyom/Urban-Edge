@@ -3,7 +3,7 @@ export default function Marquee() {
   
   return (
     <div className="w-full py-12 border-y border-sky-100 overflow-hidden flex bg-white/40 backdrop-blur-sm">
-      <div className="flex w-max animate-[marquee_30s_linear_infinite]">
+      <div className="flex w-max animate-marquee">
         {[...Array(4)].map((_, i) => (
           <div key={i} className="flex items-center">
             {clients.map((client, j) => (
