@@ -41,7 +41,7 @@ export default function ValueProp() {
             {[
               { number: "300%", label: "Average ROI" },
               { number: "50M+", label: "Impressions" },
-              { number: "12", label: "Global Markets" },
+              { number: "120+", label: "Total Clients" },
               { number: "24/7", label: "Brand Monitoring" }
             ].map((stat, i) => (
               <motion.div

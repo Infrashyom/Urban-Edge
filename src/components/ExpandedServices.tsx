@@ -8,47 +8,61 @@ const services = [
     title: "Strategic Growth & Analytics",
     desc: "We don't guess. We analyze. By leveraging deep demographic data and behavioral patterns, we engineer growth strategies that target high-value audiences. Our proprietary analytics framework ensures every campaign delivers measurable ROI.",
     mediaType: "image",
-    mediaSrc: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    mediaSrc: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     tags: ["Data Science", "Audience Targeting", "Conversion Tracking"]
   },
   {
     title: "Brand Curation & Aesthetics",
     desc: "Your feed is your digital storefront. We meticulously craft visual identities, ensuring cohesive grid planning, stunning photography, and elegant typography that instantly communicates premium quality to your audience.",
-    mediaType: "video",
-    mediaSrc: "https://assets.mixkit.co/videos/preview/mixkit-woman-taking-photos-of-her-food-with-her-smartphone-40332-large.mp4",
+    mediaType: "image",
+    mediaSrc: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=1200",
     tags: ["Art Direction", "Content Production", "Visual Identity"]
   },
   {
     title: "Community Cultivation",
     desc: "Followers are passive; communities are active. We foster meaningful relationships with your most engaged advocates through proactive community management, exclusive activations, and authentic two-way dialogue.",
     mediaType: "image",
-    mediaSrc: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    mediaSrc: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200",
     tags: ["Engagement Strategy", "Crisis Management", "Advocacy Programs"]
   },
   {
     title: "Influencer & Creator Partnerships",
     desc: "We align your brand with the voices that matter. From micro-influencers to global ambassadors, we manage end-to-end creator campaigns that drive authentic engagement.",
-    mediaType: "video",
-    mediaSrc: "https://assets.mixkit.co/videos/preview/mixkit-girl-taking-a-selfie-on-the-street-34538-large.mp4",
+    mediaType: "image",
+    mediaSrc: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=1200",
     tags: ["Talent Sourcing", "Campaign Management", "Authenticity"]
   },
   {
     title: "Paid Media & Performance",
     desc: "Amplify your reach with precision-targeted paid social campaigns. We optimize ad spend across platforms to maximize conversions and lower acquisition costs.",
     mediaType: "image",
-    mediaSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    mediaSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     tags: ["Media Buying", "A/B Testing", "ROI Optimization"]
   },
   {
     title: "Trend Forecasting & Viral Engineering",
     desc: "Stay ahead of the curve. We monitor cultural shifts and emerging trends to position your brand at the forefront of the digital conversation.",
     mediaType: "image",
-    mediaSrc: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    mediaSrc: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1200",
     tags: ["Cultural Intelligence", "Agile Marketing", "Trend Analysis"]
+  },
+  {
+    title: "SEO & Content Marketing",
+    desc: "Dominate search rankings and own the conversation. We build robust content ecosystems that drive organic traffic, establish thought leadership, and capture high-intent users.",
+    mediaType: "image",
+    mediaSrc: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+    tags: ["Organic Growth", "Keyword Strategy", "Content Ecosystems"]
+  },
+  {
+    title: "B2B Lead Generation & Outreach",
+    desc: "Turn your LinkedIn presence into a revenue engine. Our targeted B2B outreach strategies connect you directly with decision-makers to fill your sales pipeline with qualified leads.",
+    mediaType: "image",
+    mediaSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+    tags: ["Outbound Strategy", "Sales Pipeline", "Networking"]
   }
 ];
 
-export default function ExpandedServices() {
+export default function ExpandedServices({ hideLink = false }: { hideLink?: boolean }) {
   return (
     <section className="py-24 sm:py-32 bg-sky-50 relative">
       <div className="container mx-auto px-4 sm:px-6 md:px-12">
@@ -84,7 +98,7 @@ export default function ExpandedServices() {
                   whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="w-full lg:w-1/2 aspect-video lg:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl shadow-sky-900/10 relative group"
+                  className="w-full lg:w-1/2 aspect-video lg:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl shadow-sky-900/10 relative group bg-white"
                 >
                   {service.mediaType === 'video' ? (
                     <video 
@@ -100,7 +114,7 @@ export default function ExpandedServices() {
                     <img 
                       src={service.mediaSrc} 
                       alt={service.title} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 mix-blend-multiply opacity-90"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                       referrerPolicy="no-referrer"
                     />
                   )}
@@ -128,13 +142,15 @@ export default function ExpandedServices() {
                     <p className="font-sans text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-8 sm:mb-10">
                       {service.desc}
                     </p>
-                    <Link 
-                      to="/services" 
-                      className="inline-flex items-center gap-2 font-sans font-medium text-sky-600 hover:text-sky-800 transition-colors group"
-                    >
-                      <span className="border-b border-sky-600/30 group-hover:border-sky-800 pb-1 transition-colors">Discover more</span>
-                      <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    {!hideLink && (
+                      <Link 
+                        to="/services" 
+                        className="inline-flex items-center gap-2 font-sans font-medium text-sky-600 hover:text-sky-800 transition-colors group"
+                      >
+                        <span className="border-b border-sky-600/30 group-hover:border-sky-800 pb-1 transition-colors">Discover more</span>
+                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    )}
                   </motion.div>
                 </div>
 

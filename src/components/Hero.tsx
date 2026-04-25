@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform, Variants } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Play } from 'lucide-react';
 
@@ -13,7 +13,7 @@ export default function Hero() {
   const yText = useTransform(scrollYProgress, [0, 1], [0, 150]);
 
   // Stagger variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -21,9 +21,9 @@ export default function Hero() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } }
+    show: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' as any } }
   };
 
   return (
@@ -78,7 +78,7 @@ export default function Hero() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.4, duration: 1, ease: 'easeOut' as any }}
             className="col-span-1 lg:col-span-6 relative mt-8 lg:mt-0"
           >
             <div className="relative aspect-square md:aspect-[4/3] lg:aspect-square max-h-[70vh] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl shadow-sky-900/10 group">
