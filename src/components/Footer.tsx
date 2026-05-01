@@ -24,15 +24,26 @@ export default function Footer() {
           </div>
           
           <div className="flex gap-6">
-            {['Instagram', 'LinkedIn', 'Twitter'].map((social) => (
-              <a 
-                key={social}
-                href="#" 
-                className="font-sans text-sm text-slate-500 hover:text-sky-600 transition-colors"
-              >
-                {social}
-              </a>
-            ))}
+            <a 
+              href="https://www.instagram.com/_urban_edge_official?igsh=Z2gxcXJoYmxncXhq" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-sans text-sm text-slate-500 hover:text-sky-600 transition-colors"
+            >
+              Instagram
+            </a>
+            <a 
+              href="#" 
+              className="font-sans text-sm text-slate-500 hover:text-sky-600 transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a 
+              href="#" 
+              className="font-sans text-sm text-slate-500 hover:text-sky-600 transition-colors"
+            >
+              Twitter
+            </a>
           </div>
         </div>
       </div>

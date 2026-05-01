@@ -4,26 +4,26 @@ export default function About() {
   return (
     <section className="py-32 px-6 md:px-12 bg-white min-h-screen flex items-center">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative aspect-square md:aspect-[4/3] lg:aspect-square max-h-[70vh] rounded-2xl overflow-hidden shadow-xl shadow-sky-900/5"
+            className="col-span-1 lg:col-span-7 relative aspect-video rounded-2xl overflow-hidden shadow-xl shadow-sky-900/5 bg-slate-100"
           >
-            <img 
-              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-              alt="Our modern office" 
-              className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-700 mix-blend-multiply"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-sky-500/10 mix-blend-overlay pointer-events-none" />
-            <div className="absolute inset-0 border border-black/5 rounded-2xl pointer-events-none" />
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0"
+              title="About Us Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </motion.div>
 
-          <div>
+          <div className="col-span-1 lg:col-span-5">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

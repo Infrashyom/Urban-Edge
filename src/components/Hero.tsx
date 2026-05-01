@@ -37,7 +37,7 @@ export default function Hero() {
             variants={containerVariants}
             initial="hidden"
             animate="show"
-            className="col-span-1 lg:col-span-6 flex flex-col items-start text-left"
+            className="col-span-1 lg:col-span-5 flex flex-col items-start text-left"
           >
             <motion.span 
               variants={itemVariants}
@@ -79,35 +79,18 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 1, ease: 'easeOut' as any }}
-            className="col-span-1 lg:col-span-6 relative mt-8 lg:mt-0"
+            className="col-span-1 lg:col-span-7 relative mt-8 lg:mt-0"
           >
-            <div className="relative aspect-square md:aspect-[4/3] lg:aspect-square max-h-[70vh] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl shadow-sky-900/10 group">
-              <video 
-                autoPlay 
-                loop 
-                muted 
-                playsInline 
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-              >
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-creative-content-creator-working-on-a-video-at-home-43632-large.mp4" type="video/mp4" />
-              </video>
+            <div className="relative aspect-video rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl shadow-sky-900/10 group bg-slate-100">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0"
+                title="Intro Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
               <div className="absolute inset-0 bg-sky-900/10 mix-blend-overlay border border-white/20 rounded-[2rem] sm:rounded-[3rem] pointer-events-none" />
-              
-              {/* Floating detail badge over video */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.8 }}
-                className="absolute bottom-6 sm:bottom-10 left-6 right-6 sm:left-10 sm:right-auto bg-white/90 backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-white/50 shadow-lg flex items-center gap-4 sm:gap-5"
-              >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 shrink-0">
-                  <Play size={18} fill="currentColor" className="ml-1" />
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-slate-900">Brand Storytelling</div>
-                  <div className="text-xs text-slate-500">Watch our latest campaigns</div>
-                </div>
-              </motion.div>
             </div>
             
             {/* Background decorative blob behind video */}

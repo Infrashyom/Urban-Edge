@@ -119,15 +119,26 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label className="font-sans text-sm text-slate-500">Email Address</label>
-                <input 
-                  type="email" 
-                  name="email"
-                  required
-                  className="w-full bg-transparent border-b border-sky-200 py-3 text-slate-900 font-light focus:outline-none focus:border-sky-500 transition-colors"
-                  placeholder="jane@example.com"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <label className="font-sans text-sm text-slate-500">Email Address</label>
+                  <input 
+                    type="email" 
+                    name="email"
+                    required
+                    className="w-full bg-transparent border-b border-sky-200 py-3 text-slate-900 font-light focus:outline-none focus:border-sky-500 transition-colors"
+                    placeholder="jane@example.com"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="font-sans text-sm text-slate-500">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    name="phone"
+                    className="w-full bg-transparent border-b border-sky-200 py-3 text-slate-900 font-light focus:outline-none focus:border-sky-500 transition-colors"
+                    placeholder="+91 0000000000"
+                  />
+                </div>
               </div>
 
               <div className="space-y-2">

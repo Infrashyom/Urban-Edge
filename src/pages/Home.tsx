@@ -4,6 +4,7 @@ import Marquee from '../components/Marquee';
 import ValueProp from '../components/ValueProp';
 import ExpandedServices from '../components/ExpandedServices';
 import WorkPreview from '../components/WorkPreview';
+import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <ValueProp />
       <ExpandedServices />
       <WorkPreview />
+      <Testimonials />
       <Contact />
     </div>
   );
