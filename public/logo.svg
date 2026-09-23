@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 140" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ueOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5A1F" />
+      <stop offset="100%" stop-color="#FF4500" />
+    </linearGradient>
+  </defs>
+
+  <!-- 'U' Outer & Inner with Skyline Silhouette in Slate-900 -->
+  <path d="M 10,10 L 36,10 L 36,72 C 36,92 50,104 68,104 C 86,104 100,92 100,72 L 100,10 L 126,10 L 126,72 C 126,108 100,130 68,130 C 36,130 10,108 10,72 Z" fill="#0F172A"/>
+  
+  <!-- Skyline Silhouette inside U -->
+  <path d="M 43,98 L 43,75 L 49,75 L 49,55 L 55,55 L 55,72 L 63,72 L 63,38 L 67,22 L 71,22 L 75,38 L 75,70 L 83,70 L 83,58 L 89,58 L 89,78 L 94,78 L 94,98 Z" fill="#0F172A"/>
+
+  <!-- 'E' Slanted Horizontal Speed Stripes -->
+  <!-- Top Bar -->
+  <polygon points="136,15 240,15 220,42 136,42" fill="#0F172A"/>
+  <!-- Middle Bar -->
+  <polygon points="136,58 225,58 205,85 136,85" fill="#0F172A"/>
+  <!-- Bottom Bar (Orange Accent) -->
+  <polygon points="136,102 210,102 190,129 136,129" fill="url(#ueOrange)"/>
+</svg>
