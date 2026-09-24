@@ -79,10 +79,11 @@ The Contact Page is structurally configured to send its data to a Google Sheet w
 
 You can easily replace images directly using the file manager by uploading files with these exact names to the `/public` folder:
 
-1. **Official Brand Logo (Navbar & Footer)**:
-   - File path: `public/logo.png`, `public/logo.jpg`, or `public/logo.svg`
-   - Used for: Header navigation bar, mobile menu, and website footer.
-   - Recommended format: Transparent PNG or high-res JPG/SVG with the Urban Edge emblem and wordmark.
+1. **Official Brand Logo & Favicon**:
+   - File path: `public/logo.png`
+   - Used for: Header navigation bar, mobile menu, website footer, and browser tab favicon.
+   - Recommended dimensions: **512 × 512 px** (or **256 × 256 px**), **1:1 Square aspect ratio**.
+   - Recommended format: PNG with transparent background (or dark square background), with the "UE" emblem centered and ~10-15% padding around the edges.
 
 2. **Founder Image (About Page)**:
    - File path: `public/founder.jpg` or `public/founder.png`

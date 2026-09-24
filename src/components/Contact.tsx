@@ -13,7 +13,7 @@ export default function Contact() {
     const formData = new FormData(form);
 
     try {
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyvHaxL_Ydm5QXjfbYR-aprGE6w9zofU3A2vR03Y2WIoII8OZt6zqFGDjtBWplCb3rr_A/exec';
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbw4aE1TjZ3PJq6A2vEqG7d_1h1p7XhgqtDSm9hcLmsN6ZmJVWa8U8QCQf9rm-OOcvyEcA/exec';
       
       // We use mode 'no-cors' because Google Apps Script doesn't auto-send CORS headers for JSON
       await fetch(scriptURL, {
